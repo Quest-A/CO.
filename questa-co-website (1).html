@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuestA Co. - Quality Assurance & Data Analysis Services</title>
+    <style>
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2c3e50;
+            --background-color: #f4f4f4;
+            --text-color: #333;
+            --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: var(--primary-color);
+            color: #fff;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--box-shadow);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header a {
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 1rem;
+        }
+
+        header #branding h1 {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+
+        header nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        header nav ul li {
+            margin-left: 1.5rem;
+        }
+
+        header .highlight, header .current a {
+            color: var(--secondary-color);
+            font-weight: bold;
+        }
+
+        header a:hover {
+            color: var(--secondary-color);
+            transition: 0.3s;
+        }
+
+        #showcase {
+            height: 100vh;
+            background: url('/api/placeholder/1200/800') no-repeat center center/cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.5);
+            background-blend-mode: overlay;
+        }
+
+        #showcase h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        #showcase p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--primary-color);
+            color: #fff;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: var(--secondary-color);
+        }
+
+        #services {
+            padding: 4rem 0;
+        }
+
+        .services-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 2rem;
+        }
+
+        #services .box {
+            flex: 1 1 300px;
+            text-align: center;
+            padding: 2rem;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: var(--box-shadow);
+            transition: 0.3s;
+        }
+
+        #services .box:hover {
+            transform: translateY(-5px);
+        }
+
+        #services .box img {
+            width: 80px;
+            height: 80px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            margin: 0 auto 1rem;
+            padding: 1rem;
+        }
+
+        footer {
+            background-color: var(--secondary-color);
+            color: #fff;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 4rem;
+        }
+
+        @media (max-width: 768px) {
+            header nav {
+                display: none;
+            }
+
+            #showcase h1 {
+                font-size: 2.5rem;
+            }
+
+            #showcase p {
+                font-size: 1rem;
+            }
+
+            .services-container {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 480px) {
+            #showcase h1 {
+                font-size: 2rem;
+            }
+
+            #services .box {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div id="branding">
+                <h1><span class="highlight">QuestA</span> Co.</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li class="current"><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="showcase">
+        <div class="container">
+            <h1>Quality Assurance & Data Analysis</h1>
+            <p>Empowering businesses with reliable testing and insightful analysis</p>
+            <a href="#services" class="btn">Our Services</a>
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="container">
+            <div class="services-container">
+                <div class="box">
+                    <img src="/api/placeholder/80/80" alt="QA Testing">
+                    <h3>Quality Assurance Testing</h3>
+                    <p>Manual Testing, Automation Testing, API Testing, Performance Testing</p>
+                </div>
+                <div class="box">
+                    <img src="/api/placeholder/80/80" alt="Data Analysis">
+                    <h3>Data Analysis Services</h3>
+                    <p>Comprehensive data analysis solutions for all your business needs</p>
+                </div>
+                <div class="box">
+                    <img src="/api/placeholder/80/80" alt="Privacy">
+                    <h3>Privacy & Security</h3>
+                    <p>We prioritize the protection of your sensitive information</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>QuestA Co. &copy; 2024 | Quality Assurance & Data Analysis Services</p>
+    </footer>
+</body>
+</html>
